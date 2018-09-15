@@ -16,7 +16,7 @@ class GameScene: SKScene {
     
     private var lastUpdateTime : TimeInterval = 0
     private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+    private var button : SKSpriteNode?
     private var startY : CGFloat = 0.0
     
     private let numberFormatter = NumberFormatter()
@@ -54,8 +54,18 @@ class GameScene: SKScene {
 //                                              SKAction.fadeOut(withDuration: 0.5),
 //                                              SKAction.removeFromParent()]))
 //        }
+        //        Eightball.image = UIImage(named: "ball\(randomIndex)")
+        button = SKSpriteNode(imageNamed: "aqua-button")
+        // Put it in the center of the scene
+//        let midY = (self.view?.frame.height)! / 2
+//        let midX = (self.view?.frame.width)! / 2
+        button!.position = CGPoint(x:300, y:300);
+        
+        self.addChild(button!)
         let maxValue = size.height / 2
         self.minStep = maxValue / 7
+        
+
     }
     
     
